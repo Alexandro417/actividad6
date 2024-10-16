@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Imagen</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cambiar Imagen con Botón</h1>
+
+    <img id="imagen" src="/Imagenes/imagen1.jpg" alt="Imagen">
+
+    <br><br>
+
+    <button onclick="cambiarImagen()">Cambiar Imagen</button>
+
+    <script>
+        function cambiarImagen() {
+            const imagen = document.getElementById("imagen");
+            if (imagen.src.includes("/Imagenes/imagen1.jpg")) {
+                imagen.src = "/Imagenes/imagen2.jpg"; // Cambiar a la segunda imagen
+            } else {
+                imagen.src = "/Imagenes/imagen1.jpg"; // Cambiar de vuelta a la primera imagen
+            }
+        }
+    </script>
+</body>
+</html>
